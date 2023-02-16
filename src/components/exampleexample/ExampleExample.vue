@@ -1,5 +1,5 @@
 <template>
-  <h3>Alpha Beta</h3>
+  <h3>Example</h3>
 </template>
 
 

@@ -296,7 +296,7 @@ export default {
       let pos_x = 0;
       let pos_y = 0;
       pos_x = min.col * cellSize + 5;
-      pos_y = min.row * cellSize + 11;
+      pos_y = min.row * cellSize + 13;
       gridCtxt.font = "12px Arial";
       gridCtxt.fillStyle = 'black';
       gridCtxt.beginPath();

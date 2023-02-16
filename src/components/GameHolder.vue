@@ -4,11 +4,11 @@
 
 <script>
 import KenKen from './kenken/KenKen.vue';
-import AlphaBeta from './alphabeta/AlphaBeta.vue';
+import ExampleExample from './exampleexample/ExampleExample.vue';
 
 export default {
   components: {
-    KenKen, AlphaBeta
+    KenKen, ExampleExample
   },
   props: ['gameid'],
 };

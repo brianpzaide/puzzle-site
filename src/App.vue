@@ -35,7 +35,7 @@ export default {
     return {
       games: [
         { gameid: 'ken-ken', name: 'Ken Ken'},
-        { gameid: 'alpha-beta', name: 'Alpha Beta'},
+        { gameid: 'example-example', name: 'Example Example'},
       ],
       homePage: true,
       gameName: "Game",
