@@ -1,26 +1,83 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <the-navigation :game-name="gameName" :home-isactive="homePage" @navigation-events="navigationEvents"></the-navigation>
+  <main>
+    <section v-if="homePage">
+      <ul>
+        <game-item
+          v-for="game in games"
+          :key="game.gameid"
+          :gameid="game.gameid"
+          :name="game.name"
+          @gameselect-events="gameselectEvents"
+        ></game-item>
+      </ul>
+    </section>
+
+    <section v-else>
+      <game-holder :gameid="gameId"></game-holder> 
+    </section>
+
+  </main>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TheNavigation from './components/TheNavigation.vue';
+import GameItem from './components/GameItem.vue';
+import GameHolder from './components/GameHolder.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TheNavigation, GameItem, GameHolder
+  },
+  data(){
+    return {
+      games: [
+        { gameid: 'ken-ken', name: 'Ken Ken'},
+        { gameid: 'alpha-beta', name: 'Alpha Beta'},
+      ],
+      homePage: true,
+      gameName: "Game",
+      gameId: ""
+    };
+  },
+  provide() {
+    return {
+      games: this.games,
+    };
+  },
+  methods:{
+    navigationEvents(toHomePage){
+      this.homePage = toHomePage
+    },
+    gameselectEvents(selectedGameName, selectedGameId){
+      this.gameName = selectedGameName
+      this.gameId = selectedGameId
+      this.homePage = false
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+* {
+  box-sizing: border-box;
 }
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+ul{
+  list-style: none;
+  margin: 2rem auto;
+  max-width: 40rem;
+  padding: 0;
+}
+
 </style>
