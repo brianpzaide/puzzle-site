@@ -1,3 +1,4 @@
+.gitignore
 .DS_Store
 node_modules
 /dist
@@ -21,4 +22,3 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
-.gitignore
