@@ -15,6 +15,8 @@ I would also be happy to receive PRs to include other logic puzzles
 Currently this repo contains the following logic puzzles
 * kenken
 
+[demo](https://brianpzaide.github.io/puzzle-site/)
+
 ## Project setup
 ```
 npm install
