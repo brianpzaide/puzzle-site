@@ -20,5 +20,5 @@ name: Deploy to github pages
 
         - name: Run deploy script
           run: |
-            git config user.name "brianpzaide" && git config user.email "brianpzaide@gmail.com"
+            git config user.name "Your username" && git config user.email "your email"
             npm run gh-pages-deploy
