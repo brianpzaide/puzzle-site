@@ -3,14 +3,17 @@
 ## Motivation
 Most of the time when I have an appointment with a dentist, I see that
 the puzzles in the newspapers or magazines are usually solved, leaving me with nothing else to do.
-This repo exists to rectify this situation.
-All I have to do now is point my browser to my static server, copy over the puzzles from the newspaper or the magazine and enjoy.
+This repo exists to solve this problem.
+All I have to do now is point my browser to my static server, copy over the puzzles from the newspaper or the magazine and enjoy solving.
 
 I plan to implement other logic puzzles such as sudoku, killer sudoku etc over time.
 
-My ui/ux skills need a lot of improvement.
-please feel free to send me PRs to make this app usable.
-I would also be happy to receive PRs to include other logic puzzles
+Todo
+* improve the ui/ux and quality of this repo.
+* Add more logic puzzles
+* Add tests
+
+I would be happy to receive PRs for adding new puzzles or improving the quality etc.
 
 Currently this repo contains the following logic puzzles
 * kenken
